@@ -38,15 +38,15 @@ onAuthStateChanged(auth, (user) => {
         checkUserExists(user).then(isAdmin => {
             if (!isAdmin && isAdminPage) {
                 // Redirect ke halaman login jika bukan admin dan mencoba mengakses admin page
-                location.href = "http://127.0.0.1:5501/Login.html";
+                location.href = "https://antibolos.vercel.app/Login.html";
             } else if (isAdmin && !isAdminPage) {
                 // Redirect ke admin page jika admin dan tidak sedang di admin page
-                location.href = "http://127.0.0.1:5501/admin.html";
+                location.href = "https://antibolos.vercel.app/admin.html";
             }
         });
     } else if (!isLoginPage) {
         // Redirect ke halaman login jika tidak login dan bukan sedang di halaman login
-        location.href = "http://127.0.0.1:5501/Login.html";
+        location.href = "https://antibolos.vercel.app/Login.html";
     }
 });
 
@@ -61,7 +61,7 @@ if (logoutButton) {
                 timer: 5000,
                 showConfirmButton: false
             }).then(() => {
-                location.href = "http://127.0.0.1:5501/Login.html";
+                location.href = "https://antibolos.vercel.app/Login.html";
             });
         }).catch(error => {
             console.error('Sign out error', error);

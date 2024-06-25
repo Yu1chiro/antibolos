@@ -75,7 +75,7 @@ signinButton.addEventListener("click", (e) => {
             title: 'Welcome Back Admin👋',
           }).then(() => {
             // Redirect after the alert is closed
-            location.href = "http://127.0.0.1:5501/admin.html";
+            location.href = "https://antibolos.vercel.app/admin.html";
           });
         } else {
           alert("Access Denied. Admins only.");
