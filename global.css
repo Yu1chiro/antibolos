@@ -12,7 +12,7 @@
 
 }
 body {
-    background-color: #f8f9fa;
+    background-color:#61A3BA;
   }
   .form-container {
     background-color: #fff;
@@ -34,4 +34,13 @@ body {
   .btn-primary:hover {
     background-color: #0056b3;
     border-color: #004085;
+  }
+  @media screen and (max-width: 640px) {
+    .content-img, img {
+      width:70%;
+      display:flex;
+      justify-content:center;
+      transform:translateX(12%);
+
+    }
   }
