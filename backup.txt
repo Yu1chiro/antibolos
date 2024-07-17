@@ -1,0 +1,273 @@
+<div class="mb-3">
+                  <label for="Jabatan" class="form-label">Jabatan :</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="pengarah">
+                    <label class="form-check-label">
+                      Pengarah
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="penanggung-jawab" checked>
+                    <label class="form-check-label">
+                      Penanggung Jawab
+                    </label>
+                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="pembimbing-kemahasiswaan">
+                  <label class="form-check-label" for="pembimbing-kemahasiswaan">
+                    Pembimbing Kemahasiswaan
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ketua-hmj">
+                  <label class="form-check-label" for="ketua-hmj">
+                    Ketua HMJ
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="ketua-panitia">
+                  <label class="form-check-label" for="ketua-panitia">
+                    Ketua Panitia
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="wakil-ketua-panitia">
+                  <label class="form-check-label" for="wakil-ketua-panitia">
+                    Wakil Ketua Panitia
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris">
+                  <label class="form-check-label" for="sekretaris">
+                    Sekretaris
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="bendahara">
+                  <label class="form-check-label" for="bendahara">
+                    Bendahara
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koordinator-lapangan">
+                  <label class="form-check-label" for="koordinator-lapangan">
+                    Koordinator Lapangan
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-acara">
+                  <label class="form-check-label" for="koor-sie-acara">
+                    Koor. Sie Acara
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-acara">
+                  <label class="form-check-label" for="sekretaris-sie-acara">
+                    Sekretaris Sie Acara
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-acara">
+                  <label class="form-check-label" for="anggota-sie-acara">
+                    Anggota Sie Acara
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-administratif">
+                  <label class="form-check-label" for="koor-sie-administratif">
+                    Koor. Sie Administratif
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-administratif">
+                  <label class="form-check-label" for="sekretaris-sie-administratif">
+                    Sekretaris Sie Administratif
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-administratif">
+                  <label class="form-check-label" for="anggota-sie-administratif">
+                    Anggota Sie Administratif
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-disiplin">
+                  <label class="form-check-label" for="koor-sie-disiplin">
+                    Koor. Sie Disiplin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-disiplin">
+                  <label class="form-check-label" for="sekretaris-sie-disiplin">
+                    Sekretaris Sie Disiplin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-disiplin">
+                  <label class="form-check-label" for="anggota-sie-disiplin">
+                    Anggota Sie Disiplin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-pk">
+                  <label class="form-check-label" for="koor-sie-pk">
+                    Koor. Sie PK
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-pk">
+                  <label class="form-check-label" for="sekretaris-sie-pk">
+                    Sekretaris Sie PK
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-pk">
+                  <label class="form-check-label" for="anggota-sie-pk">
+                    Anggota Sie PK
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-kesekretariatan">
+                  <label class="form-check-label" for="koor-sie-kesekretariatan">
+                    Koor. Sie Kesekretariatan
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-kesekretariatan">
+                  <label class="form-check-label" for="sekretaris-sie-kesekretariatan">
+                    Sekretaris Sie Kesekretariatan
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-kesekretariatan">
+                  <label class="form-check-label" for="anggota-sie-kesekretariatan">
+                    Anggota Sie Kesekretariatan
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-humas">
+                  <label class="form-check-label" for="koor-sie-humas">
+                    Koor. Sie Humas
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-humas">
+                  <label class="form-check-label" for="sekretaris-sie-humas">
+                    Sekretaris Sie Humas
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-humas">
+                  <label class="form-check-label" for="anggota-sie-humas">
+                    Anggota Sie Humas
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-perdek">
+                  <label class="form-check-label" for="koor-sie-perdek">
+                    Koor. Sie Perdek
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-perdek">
+                  <label class="form-check-label" for="sekretaris-sie-perdek">
+                    Sekretaris Sie Perdek
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-perdek">
+                  <label class="form-check-label" for="anggota-sie-perdek">
+                    Anggota Sie Perdek
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-tkt">
+                  <label class="form-check-label" for="koor-sie-tkt">
+                    Koor. Sie TKT
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-tkt">
+                  <label class="form-check-label" for="sekretaris-sie-tkt">
+                    Sekretaris Sie TKT
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-tkt">
+                  <label class="form-check-label" for="anggota-sie-tkt">
+                    Anggota Sie TKT
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-kerohanian">
+                  <label class="form-check-label" for="koor-sie-kerohanian">
+                    Koor. Sie Kerohanian
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-kerohanian">
+                  <label class="form-check-label" for="sekretaris-sie-kerohanian">
+                    Sekretaris Sie Kerohanian
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-kerohanian">
+                  <label class="form-check-label" for="anggota-sie-kerohanian">
+                    Anggota Sie Kerohanian
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-konsumsi">
+                  <label class="form-check-label" for="koor-sie-konsumsi">
+                    Koor. Sie Konsumsi
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-konsumsi">
+                  <label class="form-check-label" for="sekretaris-sie-konsumsi">
+                    Sekretaris Sie Konsumsi
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-konsumsi">
+                  <label class="form-check-label" for="anggota-sie-konsumsi">
+                    Anggota Sie Konsumsi
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-pp">
+                  <label class="form-check-label" for="koor-sie-pp">
+                    Koor. Sie PP
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-pp">
+                  <label class="form-check-label" for="sekretaris-sie-pp">
+                    Sekretaris Sie PP
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-pp">
+                  <label class="form-check-label" for="anggota-sie-pp">
+                    Anggota Sie PP
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="koor-sie-pubdok">
+                  <label class="form-check-label" for="koor-sie-pubdok">
+                    Koor. Sie Pubdok
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="sekretaris-sie-pubdok">
+                  <label class="form-check-label" for="sekretaris-sie-pubdok">
+                    Sekretaris Sie Pubdok
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="anggota-sie-pubdok">
+                  <label class="form-check-label" for="anggota-sie-pubdok">
+                    Anggota Sie Pubdok
+                  </label>
+                </div>
+              </div>

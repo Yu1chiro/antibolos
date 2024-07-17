@@ -76,6 +76,7 @@ signinButton.addEventListener("click", (e) => {
           }).then(() => {
             // Redirect after the alert is closed
             location.href = "https://antibolos.vercel.app/admin.html";
+            // location.href = "http://127.0.0.1:5501/admin.html";
           });
         } else {
           alert("Access Denied. Admins only.");

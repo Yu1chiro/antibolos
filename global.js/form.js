@@ -26,14 +26,25 @@ const getLocation = (callback, errorCallback) => {
     }
 };
 
+// Fungsi untuk menentukan keterangan berdasarkan lokasi
+const determineKeterangan = (latitude, longitude) => {
+    const targetLatitude = -6.917464;  // Latitude lokasi yang ditentukan
+    const targetLongitude = 107.619123; // Longitude lokasi yang ditentukan
+    const tolerance = 0.01; // Toleransi jarak dalam derajat
+
+    const isWithinLocation = Math.abs(latitude - targetLatitude) <= tolerance && Math.abs(longitude - targetLongitude) <= tolerance;
+    return isWithinLocation ? "Hadir" : "Alpa";
+};
+
 // Event listener untuk tombol submit
 document.getElementById("submit-data").addEventListener("click", () => {
     const name = document.getElementById("Name").value;
     const nim = document.getElementById("Nim").value;
     const prodi = document.getElementById("Prodi").value;
+    const Jabatan = document.getElementById("Jabatan").value;
     const statusMessage = document.getElementById("status-message");
 
-    if (!name || !nim || !prodi) {
+    if (!name || !nim || !prodi || !Jabatan) {
         statusMessage.textContent = "Harap isi form absensi dengan lengkap";
         statusMessage.className = "text-danger fw-bold";
         return;
@@ -41,11 +52,14 @@ document.getElementById("submit-data").addEventListener("click", () => {
 
     getLocation((position) => {
         const { latitude, longitude } = position.coords;
+        const keterangan = determineKeterangan(latitude, longitude);
 
         const newData = {
             name,
             nim,
             prodi,
+            Jabatan,
+            keterangan,
             location: {
                 latitude,
                 longitude
@@ -54,7 +68,7 @@ document.getElementById("submit-data").addEventListener("click", () => {
         };
 
         const submitButton = document.getElementById("submit-data");
-        submitButton.textContent = "Sending data...";
+        submitButton.textContent = "...........";
         submitButton.disabled = true;
 
         // Menyimpan data ke Firebase

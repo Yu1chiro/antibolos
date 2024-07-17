@@ -14,43 +14,56 @@ const firebaseConfig = {
     measurementId: "G-YKGFS1JRHY"
 };
 
-// Inisialisasi Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase(app);
+  // Inisialisasi Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const database = getDatabase(app);
 
-// Fungsi untuk cek user di database admin
-const checkUserExists = (user) => {
-    if (user) {
-        const uid = user.uid;
-        const usersRef = ref(database, `admin/${uid}`);
-        return get(usersRef).then(snapshot => snapshot.exists());
-    }
-    return Promise.resolve(false);
-};
+  const checkUserExists = (user) => {
+      if (user) {
+          const uid = user.uid;
+          const usersRef = ref(database, `admin/${uid}`);
+          return get(usersRef).then(snapshot => snapshot.exists());
+      }
+      return Promise.resolve(false);
+  };
 
-// Mengecek status autentikasi user
-onAuthStateChanged(auth, (user) => {
-    const isAdminPage = window.location.href.includes("admin.html");
-    const isLoginPage = window.location.href.includes("Login.html");
+  const isAdminPage = window.location.href.includes("admin.html");
+  const isLoginPage = window.location.href.includes("Login.html");
 
-    if (user) {
-        checkUserExists(user).then(isAdmin => {
-            if (!isAdmin && isAdminPage) {
-                // Redirect ke halaman login jika bukan admin dan mencoba mengakses admin page
-                location.href = "https://antibolos.vercel.app/Login.html";
-            } else if (isAdmin && !isAdminPage) {
-                // Redirect ke admin page jika admin dan tidak sedang di admin page
-                location.href = "https://antibolos.vercel.app/admin.html";
-            }
-        });
-    } else if (!isLoginPage) {
-        // Redirect ke halaman login jika tidak login dan bukan sedang di halaman login
-        location.href = "https://antibolos.vercel.app/Login.html";
-    }
-});
+  const loadingElement = document.getElementById('loading');
+  const contentElement = document.getElementById('content');
 
-// Logout
+  loadingElement.style.display = 'block';
+
+  onAuthStateChanged(auth, (user) => {
+      if (user) {
+          checkUserExists(user).then(isAdmin => {
+              if (isAdmin && isAdminPage) {
+                  loadingElement.style.display = 'none';
+                  contentElement.style.display = 'block';
+              } else if (!isAdmin && isAdminPage) {
+                  window.location.href = "https://antibolos.vercel.app/Login.html";
+                //   window.location.href = "http://127.0.0.1:5501/Login.html";
+              } else if (isAdmin && !isAdminPage) {
+                //   window.location.href = "http://127.0.0.1:5501/Admin.html";
+                  window.location.href = "https://antibolos.vercel.app/Admin.html";
+              } else {
+                  loadingElement.style.display = 'none';
+                  contentElement.style.display = 'block';
+              }
+          });
+      } else {
+          if (!isLoginPage) {
+            //   window.location.href = "http://127.0.0.1:5501/Login.html";
+              window.location.href = "https://antibolos.vercel.app/Login.html";
+          } else {
+              loadingElement.style.display = 'none';
+              contentElement.style.display = 'block';
+          }
+      }
+  });
+  // Logout
 const logoutButton = document.getElementById("logout-button");
 if (logoutButton) {
     logoutButton.addEventListener("click", () => {
@@ -62,9 +75,10 @@ if (logoutButton) {
                 showConfirmButton: false
             }).then(() => {
                 location.href = "https://antibolos.vercel.app/Login.html";
+                // location.href = "http://127.0.0.1:5501/Login.html";
             });
         }).catch(error => {
             console.error('Sign out error', error);
         });
     });
-}
+};
