@@ -28,12 +28,12 @@ const getLocation = (callback, errorCallback) => {
 
 // Fungsi untuk menentukan keterangan berdasarkan lokasi
 const determineKeterangan = (latitude, longitude) => {
-    const targetLatitude = -6.917464;  // Latitude lokasi yang ditentukan
-    const targetLongitude = 107.619123; // Longitude lokasi yang ditentukan
-    const tolerance = 0.01; // Toleransi jarak dalam derajat
+    const targetLatitude = -8.1125983;  // Latitude lokasi diawali dengan mines
+    const targetLongitude = 115.0856583; // Longitude lokasi tidak dengan minus 
+    const tolerance = 0.002695; // Toleransi jarak dalam derajat
 
     const isWithinLocation = Math.abs(latitude - targetLatitude) <= tolerance && Math.abs(longitude - targetLongitude) <= tolerance;
-    return isWithinLocation ? "Hadir" : "Alpa";
+    return isWithinLocation ? "Hadir" : "Tidak Hadir";
 };
 
 // Event listener untuk tombol submit
