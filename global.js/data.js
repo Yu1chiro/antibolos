@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-import { getDatabase, ref, set, onChildAdded, onChildRemoved, remove} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
+import { getDatabase, ref, get, set, onChildAdded, onChildRemoved, remove} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
 
 // Konfigurasi Firebase
 const firebaseConfig = {
@@ -85,6 +85,44 @@ document.getElementById('tambah-data-mahasiswa').addEventListener('click', () =>
 
 });
 ///// FETCHING
+const extractTambahan = async () => {
+    const dataRef = ref(database, '/data-tambahan');
+
+    try {
+        const snapshot = await get(dataRef);
+
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            const extractedData = [];
+
+            Object.keys(data).forEach(key => {
+                const item = data[key];
+                extractedData.push({
+                    NAMA: item.nama,
+                    NIM: item.nim,
+                    PRODI: item.programStudi,
+                    JABATAN: item.jabatan,
+                    KETERANGAN: item.status,
+                    ALASAN: item.alasan
+                    
+                });
+            });
+
+            const worksheet = XLSX.utils.json_to_sheet(extractedData);
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, "Data-Tambahan");
+
+            XLSX.writeFile(workbook, "Data-Tambahan-Panitia-UDAY2024.xlsx");
+            alert("Data berhasil diekstrak dan diunduh.");
+        } else {
+            alert("Tidak ada data absensi yang tersedia untuk diekstrak.");
+        }
+    } catch (error) {
+        console.error("Error extracting data from database", error);
+        alert("Terjadi kesalahan saat mengekstrak data.");
+    }
+};
+document.getElementById("extract-tambahan").addEventListener("click", extractTambahan);
 // Ambil data dari Firebase dan tampilkan dalam tabel
 onChildAdded(dataRef, (snapshot) => {
     const data = snapshot.val();

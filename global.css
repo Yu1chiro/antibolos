@@ -11,6 +11,25 @@
     shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
 
 }
+#countdown {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color:white;
+  font-weight:bold;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#main-content, #hidden-content {
+  display: none; /* Hide both elements initially */
+}
+#btn-confirm {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 body {
     background-color:#61A3BA;
   }

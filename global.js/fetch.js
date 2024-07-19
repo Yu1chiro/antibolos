@@ -101,12 +101,12 @@ const extractData = async () => {
             Object.keys(data).forEach(key => {
                 const item = data[key];
                 extractedData.push({
-                    Timestamp: formatTimestamp(item.timestamp),
-                    Nama: item.name,
+                    WAKTU: formatTimestamp(item.timestamp),
+                    NAMA: item.name,
                     NIM: item.nim,
-                    Prodi: item.prodi,
-                    Jabatan: item.Jabatan,
-                    Keterangan: item.keterangan
+                    PRODI: item.prodi,
+                    JABATAN: item.Jabatan,
+                    KETERANGAN: item.keterangan
                 });
             });
 
